@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>press any key on your keyboard:</p>
+    <div id="eventInfo"></div>
+
+    <script>
+        function displayEventInformation(event){
+            const eventInfoDiv = document.getElementById('eventInfo');
+            eventInfoDiv.innerHTML=`
+
+            <p>Event type: ${event.type}</p>
+            <p>key Code: ${event.KeyCode}</p>
+            <p>Key: ${event.key}</p>
+            `;
+        }
+        document.addEventListener('keydown',function(event){
+            displayEventInformation(event);
+        });
+    </script>
+    
+</body>
+</html>
